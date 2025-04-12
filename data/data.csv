@@ -1,0 +1,81 @@
+PatientID,Treatment,Outcome
+1,Drug A,Alive
+2,Drug A,Dead
+3,Drug A,Dead
+4,Drug A,Dead
+5,Drug A,Alive
+6,Drug A,Dead
+7,Drug A,Dead
+8,Drug A,Dead
+9,Drug A,Dead
+10,Drug A,Dead
+11,Drug A,Dead
+12,Drug A,Alive
+13,Drug A,Dead
+14,Drug A,Dead
+15,Drug A,Dead
+16,Drug A,Dead
+17,Drug A,Dead
+18,Drug A,Alive
+19,Drug A,Dead
+20,Drug A,Alive
+21,Drug B,Alive
+22,Drug B,Alive
+23,Drug B,Alive
+24,Drug B,Dead
+25,Drug B,Alive
+26,Drug B,Alive
+27,Drug B,Alive
+28,Drug B,Alive
+29,Drug B,Alive
+30,Drug B,Dead
+31,Drug B,Alive
+32,Drug B,Alive
+33,Drug B,Alive
+34,Drug B,Alive
+35,Drug B,Dead
+36,Drug B,Alive
+37,Drug B,Alive
+38,Drug B,Dead
+39,Drug B,Alive
+40,Drug B,Alive
+41,Drug C,Alive
+42,Drug C,Alive
+43,Drug C,Dead
+44,Drug C,Dead
+45,Drug C,Alive
+46,Drug C,Dead
+47,Drug C,Dead
+48,Drug C,Dead
+49,Drug C,Dead
+50,Drug C,Alive
+51,Drug C,Dead
+52,Drug C,Dead
+53,Drug C,Dead
+54,Drug C,Dead
+55,Drug C,Alive
+56,Drug C,Dead
+57,Drug C,Dead
+58,Drug C,Dead
+59,Drug C,Dead
+60,Drug C,Alive
+61,Placebo,Dead
+62,Placebo,Dead
+63,Placebo,Dead
+64,Placebo,Dead
+65,Placebo,Alive
+66,Placebo,Dead
+67,Placebo,Dead
+68,Placebo,Dead
+69,Placebo,Dead
+70,Placebo,Alive
+71,Placebo,Dead
+72,Placebo,Dead
+73,Placebo,Dead
+74,Placebo,Dead
+75,Placebo,Alive
+76,Placebo,Dead
+77,Placebo,Dead
+78,Placebo,Dead
+79,Placebo,Dead
+80,Placebo,Alive
