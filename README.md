@@ -10,7 +10,7 @@ Visual Studio Code (VS Code) is a lightweight, free code editor developed by Mic
 
 [Visual Studio Code Documentation](https://code.visualstudio.com/docs)
 
-## Who is using Visual Studio Code
+### Who is using Visual Studio Code
 
 [shiny](https://github.com/rstudio/shiny) and [matplotlib](https://github.com/matplotlib/matplotlib) are examples of top projects which using Visual Studio Code.
 
@@ -35,14 +35,14 @@ Checklist for Success:
 
 Visual Studio Code Settings
 
-* Create and commit the .vscode/settings.json and .vscode/extensions.json files. PLease use GitHub "Fn + ." to access web vscode.
+* Stage, Commit and Push the .vscode/settings.json and .vscode/extensions.json files. Please use GitHub "Fn + ." to access web vscode.
 * Close and Open the web vscode session and inspect what changed.
 * Create a LICENSE file.
-* CHnage a font size setting and add it to settings.json file.
+* Change a font size setting and add it to the settings.json file.
 * Stage, Commit and Push the changes.
 
 
-Devcontainers steps which you can skip if you are using your local computer
+Devcontainer (Secure Cloud Based Solution)
 
 * Set up a devcontainer (.devcontainer/devcontainer.json) for Python or R. 
 * Run the Codespaces on GitHub.
@@ -51,8 +51,9 @@ Devcontainers steps which you can skip if you are using your local computer
 Analysis
 
 * Load and explore the Trial data in data/data.csv using your analysis script.
-* The installed extensions and settings shuld hint you the function names and format the file on save.
+* The installed extensions and settings should hint you the function names and format the file on save.
 * Perform the statistical analysis to identify if any drug is working.
+* Validate your results with GitHub Copilot.
 * Stage, Commit and Push your work.
 
 
