@@ -27,7 +27,7 @@ However first you have to set up your Visual Studio Code environment.
 
 Please Use Python or R.
 
-Please refer to [python_codespace](https://www.gtihub.com/polkas/python_codespace) or [r_codespace](https://www.gtihub.com/polkas/r_codespace) repositories with .vscode and .devcontainer directories. Each repository contains two key configuration folders. The .vscode folder contains environment-specific JSON files for editor settings, debugging configurations, and task automation. The .devcontainer folder holds the container configuration to build a consistent, reproducible development environment.
+Please refer to [python_codespace](https://www.github.com/polkas/python_codespace) or [r_codespace](https://www.github.com/polkas/r_codespace) repositories with .vscode and .devcontainer directories. Each repository contains two key configuration folders. The .vscode folder contains environment-specific JSON files for editor settings, debugging configurations, and task automation. The .devcontainer folder holds the container configuration to build a consistent, reproducible development environment.
 
 Checklist for Success:
 
