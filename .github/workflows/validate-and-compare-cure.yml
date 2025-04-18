@@ -14,29 +14,43 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
 
-      - name: Ensure .vscode/settings.json & extensions.json exist
+      # ─── Validate JSON formatting ─────────────────────────────────────────────
+      - name: Validate JSON format of .vscode/settings.json
         run: |
-          test -f .vscode/settings.json  || (echo "❌ .vscode/settings.json missing" && exit 1)
-          test -f .vscode/extensions.json || (echo "❌ .vscode/extensions.json missing" && exit 1)
+          test -f .vscode/settings.json \
+            || (echo "❌ .vscode/settings.json missing" && exit 1)
+          jq -e . .vscode/settings.json > /dev/null \
+            || (echo "❌ .vscode/settings.json is not valid JSON" && exit 1)
 
-      - name: Ensure .devcontainer/devcontainer.json exists
+      - name: Validate JSON format of .vscode/extensions.json
         run: |
-          test -f .devcontainer/devcontainer.json || (echo "❌ .devcontainer/devcontainer.json missing" && exit 1)
+          test -f .vscode/extensions.json \
+            || (echo "❌ .vscode/extensions.json missing" && exit 1)
+          jq -e . .vscode/extensions.json > /dev/null \
+            || (echo "❌ .vscode/extensions.json is not valid JSON" && exit 1)
 
+      - name: Validate JSON format of .devcontainer/devcontainer.json
+        run: |
+          test -f .devcontainer/devcontainer.json \
+            || (echo "❌ .devcontainer/devcontainer.json missing" && exit 1)
+          jq -e . .devcontainer/devcontainer.json > /dev/null \
+            || (echo "❌ .devcontainer/devcontainer.json is not valid JSON" && exit 1)
+
+      # ─── Existing checks ──────────────────────────────────────────────────────
       - name: Ensure LICENSE exists
         run: |
           test -f LICENSE || (echo "❌ LICENSE file missing" && exit 1)
 
-      - name: Ensure 'fontsize' is specified in settings.json
+      - name: Ensure 'editor.fontSize' is specified in settings.json
         run: |
-          jq -e 'has("fontsize")' .vscode/settings.json \
-            || (echo "❌ key 'fontsize' not found in .vscode/settings.json" && exit 1)
+          jq -e 'has("editor.fontSize")' .vscode/settings.json \
+            || (echo "❌ key 'editor.fontSize' not found in .vscode/settings.json" && exit 1)
 
       - name: Ensure solution.txt exists
         run: |
           test -f solution.txt || (echo "❌ solution.txt missing" && exit 1)
 
-      - name: Read and trim solution, compare to repo variable
+      - name: Read, trim solution and compare to repo variable
         run: |
           trimmed=$(<solution.txt xargs)
           echo "Trimmed solution.txt → '$trimmed'"

@@ -62,7 +62,7 @@ Analysis
 * Perform the statistical analysis to identify if any drug is working. Please write down a string with a name of working drug in the `solution.txt` file, "Drug A" or "Drug B" or "Drug C" or "None".
 * Stage, Commit and Push your work.
 
-**You SUCEEDED when GitHub actions pipeline will pass (green color).**
+**You SUCCEEDED when GitHub actions pipeline will pass (green color).**
 
 
 
