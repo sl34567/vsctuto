@@ -57,8 +57,8 @@ Devcontainer (Secure Cloud Based Solution)
 
 Analysis
 
-* Load and explore the Trial data in `data/data.csv` using your own analysis script to find out which drug is working. The installed extensions and settings should hint you the function names and format the file on save.
-* Validate your results with GitHub Copilot.
+* Load and explore the Trial data in `data/data.csv` using your own analysis script to find out which drug is working. The installed extensions and settings should hint you the function names and format the file on save. You need to installed R or python dependencies like pandas.
+* [BONUS] Validate your results with GitHub Copilot. Use GitHub Copilot Agent mode and ask "Please analyze the data in data.csv to determine which drug has the highest cure rate compared to the placebo. Update the [Python|R] script if necessary, and ensure the correct result is written to solution.txt.".
 * Perform the statistical analysis to identify if any drug is working. Please write down a string with a name of working drug in the `solution.txt` file, "Drug A" or "Drug B" or "Drug C" or "None".
 * Stage, Commit and Push your work.
 
