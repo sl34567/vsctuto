@@ -43,7 +43,7 @@ Visual Studio Code Settings
 
 * Please use GitHub "Fn + ." to access web vscode. Stage, Commit and Push the `.vscode/settings.json` and `.vscode/extensions.json` files. Please refer to [python_codespace](https://www.github.com/polkas/python_codespace) or [r_codespace](https://www.github.com/polkas/r_codespace) repositories with `.vscode` and `.devcontainer` directories.
 * Close and Open the web vscode session and inspect what changed.
-* Create a `LICENSE` file.
+* Create a `LICENSE` file. [choosealicense](https://choosealicense.com/) and [GitHub license repository](https://github.com/Polkas/vsctuto/community/license/new?branch=main) can be helpful.
 * Add an editor's `font size` setting to the `settings.json` file. 
 * Stage, Commit and Push the changes.
 
@@ -59,7 +59,7 @@ Analysis
 
 * Run/Open the Codespaces on GitHub. Load and explore the Trial data in `data/data.csv` using your own analysis script to determine which drug works. The installed extensions and settings should hint you the function names and format the file on save. You need to install R or Python dependencies like pandas.
 * [BONUS] Validate your results with GitHub Copilot. Use GitHub Copilot Agent mode and ask "Please analyze the data in data.csv to determine which drug has the highest cure rate compared to the placebo. Update the [Python|R] script if necessary, and ensure the correct result ("Drug A" or "Drug B" or "Drug C" or "None") is written to solution.txt.". You can further ask about, for example effect size.
-* Perform the statistical analysis to identify if any drug is working. Please write down a string with the name of the working drug in the `solution.txt` file, "Drug A" or "Drug B" or "Drug C" or "None".
+* Please write down a string with the name of the working drug in the `solution.txt` file, "Drug A" or "Drug B" or "Drug C" or "None".
 * Stage, Commit and Push your work.
 
 **You SUCCEEDED when GitHub actions pipeline will pass (green color).**
