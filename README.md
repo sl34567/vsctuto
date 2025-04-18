@@ -14,6 +14,12 @@ Visual Studio Code (VS Code) is a lightweight, free code editor developed by Mic
 
 [shiny](https://github.com/rstudio/shiny) and [matplotlib](https://github.com/matplotlib/matplotlib) are examples of top projects which using Visual Studio Code.
 
+### GitHub Copilot
+
+[GitHub Copilot](https://github.com/features/copilot) transforms the developer experience. Backed by the leaders in AI, GitHub Copilot provides contextualized assistance throughout the software development lifecycle, from code completions and chat assistance in the IDE (Integrated Development Environment) to code explanations and answers to docs in GitHub and more. With GitHub Copilot elevating their workflow, developers can focus on: value, innovation, and happiness.
+
+GitHub Copilot is avaialable by [Chat](https://github.com/copilot) or can be integrated in your IDE like Visual Studio Code.
+
 ## Tutorial
 
 Your job will be to set up the Visual Studio Code environment and save the world.
@@ -35,7 +41,7 @@ Checklist for Success:
 
 Visual Studio Code Settings
 
-* Stage, Commit and Push the .vscode/settings.json and .vscode/extensions.json files. Please use GitHub "Fn + ." to access web vscode.
+* Please use GitHub "Fn + ." to access web vscode. Stage, Commit and Push the .vscode/settings.json and .vscode/extensions.json files. Please refer to [python_codespace](https://www.github.com/polkas/python_codespace) or [r_codespace](https://www.github.com/polkas/r_codespace) repositories with .vscode and .devcontainer directories.
 * Close and Open the web vscode session and inspect what changed.
 * Create a LICENSE file.
 * Change a font size setting and add it to the settings.json file.
@@ -44,13 +50,14 @@ Visual Studio Code Settings
 
 Devcontainer (Secure Cloud Based Solution)
 
-* Set up a devcontainer (.devcontainer/devcontainer.json) for Python or R. 
+* Please use GitHub "Fn + ." to access web vscode. Set up a devcontainer (.devcontainer/devcontainer.json) for Python or R. Please refer to [python_codespace](https://www.github.com/polkas/python_codespace) or [r_codespace](https://www.github.com/polkas/r_codespace) repositories with .vscode and .devcontainer directories.
+* Stage, Commit and Push the changes.
 * Run the Codespaces on GitHub.
 * Validate your codespace, whether it build successfully.
 
 Analysis
 
-* Load and explore the Trial data in data/data.csv using your analysis script.
+* Load and explore the Trial data in data/data.csv using your own analysis script.
 * The installed extensions and settings should hint you the function names and format the file on save.
 * Perform the statistical analysis to identify if any drug is working.
 * Validate your results with GitHub Copilot.
