@@ -43,7 +43,7 @@ Visual Studio Code Settings
 
 * Please use GitHub "Fn + ." to access web vscode. Stage, Commit and Push the `.vscode/settings.json` and `.vscode/extensions.json` files. Please refer to [python_codespace](https://www.github.com/polkas/python_codespace) or [r_codespace](https://www.github.com/polkas/r_codespace) repositories with `.vscode` and `.devcontainer` directories.
 * Close and Open the web vscode session and inspect what changed.
-* Create a `LICENSE` file. [choosealicense](https://choosealicense.com/) and [GitHub license repository](https://github.com/Polkas/vsctuto/community/license/new?branch=main) can be helpful.
+* Create a `LICENSE` file. [choosealicense](https://choosealicense.com/) and `https://github.com/[YOURUSERNAME]/vsctuto/community/license/new?branch=main` can be helpful.
 * Add an editor's `font size` setting to the `settings.json` file. 
 * Stage, Commit and Push the changes.
 
