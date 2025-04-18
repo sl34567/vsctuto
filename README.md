@@ -18,7 +18,7 @@ Visual Studio Code (VS Code) is a lightweight, free code editor developed by Mic
 
 [GitHub Copilot](https://github.com/features/copilot) transforms the developer experience. Backed by the leaders in AI, GitHub Copilot provides contextualized assistance throughout the software development lifecycle, from code completions and chat assistance in the IDE (Integrated Development Environment) to code explanations and answers to docs in GitHub and more.
 
-GitHub Copilot is available by [Chat](https://github.com/copilot) or can be integrated into your IDE like Visual Studio Code.
+GitHub Copilot is available by [Chat](https://github.com/copilot) or can be [integrated into your IDE like Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot).
 
 ## Tutorial (50 minutes)
 
