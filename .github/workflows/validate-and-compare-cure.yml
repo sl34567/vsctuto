@@ -7,8 +7,6 @@ on:
 jobs:
   validate-and-compare:
     runs-on: ubuntu-latest
-    env:
-      CURE: ${{ vars.cure }}
 
     steps:
       - name: Check out repository
@@ -51,11 +49,16 @@ jobs:
           test -f solution.txt || (echo "❌ solution.txt missing" && exit 1)
 
       - name: Read, trim solution and compare to repo variable
+        env:
+          CURE: ${{ secrets.cure }}
         run: |
           trimmed=$(<solution.txt xargs)
           echo "Trimmed solution.txt → '$trimmed'"
-          if [ "$trimmed" != "${{ vars.cure }}" ]; then
-            echo "❌ Mismatch: solution.txt ('$trimmed') ≠ vars.cure" && exit 1
-          else
-            echo "✅ Match: solution.txt equals vars.cure"
+
+          if [ "$trimmed" != "$CURE" ]; then
+            echo "❌ Mismatch: solution.txt ('$trimmed') does not match the expected cure" >&2
+            exit 1
           fi
+
+          echo "✅ Match: solution.txt equals the expected cure"
+          
