@@ -42,9 +42,10 @@ Checklist for Success:
 Visual Studio Code Settings (20 minutes)
 
 * Please use GitHub "Fn + ." to access web vscode. Stage, Commit and Push the `.vscode/settings.json` and `.vscode/extensions.json` files. Please refer to [python_codespace](https://www.github.com/polkas/python_codespace) or [r_codespace](https://www.github.com/polkas/r_codespace) repositories with `.vscode` and `.devcontainer` directories.  Each repository contains two key configuration folders. The .vscode folder contains environment-specific JSON files for editor settings, debugging configurations, and task automation. The .devcontainer folder holds the container configuration to build a consistent, reproducible development environment.
-* Close and Open the web vscode session and inspect what changed.
+* Reload the window of the web vscode session and inspect what changed.
 * Create a `LICENSE` file. [choosealicense](https://choosealicense.com/) and `https://github.com/[YOURUSERNAME]/vsctuto/community/license/new?branch=main` can be helpful.
-* Add an editor's `font size` setting to the `.vscode/settings.json` file. 
+* Change the editor font size in Settings to 16. Add the editor font size setting equal 12 to the `.vscode/settings.json` file. 
+* Add the `vscode-pets` extension to the `.vscode/extensions.json` file. Reload the window and check out what changed in the Extensions tab. Install the `vscode-pets` extension and run the pet session.
 * Stage, Commit and Push the changes.
 
 
