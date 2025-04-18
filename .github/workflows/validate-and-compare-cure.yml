@@ -54,8 +54,8 @@ jobs:
         run: |
           trimmed=$(<solution.txt xargs)
           echo "Trimmed solution.txt → '$trimmed'"
-          if [ "$trimmed" != "$CURE" ]; then
-            echo "❌ Mismatch: solution.txt ('$trimmed') ≠ vars.cure ('$CURE')" && exit 1
+          if [ "$trimmed" != "${{ vars.cure }}" ]; then
+            echo "❌ Mismatch: solution.txt ('$trimmed') ≠ vars.cure" && exit 1
           else
-            echo "✅ Match: solution.txt equals vars.cure ('$CURE')"
+            echo "✅ Match: solution.txt equals vars.cure"
           fi
