@@ -41,10 +41,10 @@ Checklist for Success:
 
 Visual Studio Code Settings
 
-* Please use GitHub "Fn + ." to access web vscode. Stage, Commit and Push the .vscode/settings.json and .vscode/extensions.json files. Please refer to [python_codespace](https://www.github.com/polkas/python_codespace) or [r_codespace](https://www.github.com/polkas/r_codespace) repositories with .vscode and .devcontainer directories.
+* Please use GitHub "Fn + ." to access web vscode. Stage, Commit and Push the `.vscode/settings.json` and `.vscode/extensions.json` files. Please refer to [python_codespace](https://www.github.com/polkas/python_codespace) or [r_codespace](https://www.github.com/polkas/r_codespace) repositories with `.vscode` and `.devcontainer` directories.
 * Close and Open the web vscode session and inspect what changed.
-* Create a LICENSE file.
-* Change a font size setting and add it to the settings.json file.
+* Create a `LICENSE` file.
+* Change a `font size` setting and add it to the `settings.json` file. 
 * Stage, Commit and Push the changes.
 
 
@@ -57,10 +57,12 @@ Devcontainer (Secure Cloud Based Solution)
 
 Analysis
 
-* Load and explore the Trial data in data/data.csv using your own analysis script.
-* The installed extensions and settings should hint you the function names and format the file on save.
-* Perform the statistical analysis to identify if any drug is working.
+* Load and explore the Trial data in `data/data.csv` using your own analysis script to find out which drug is working. The installed extensions and settings should hint you the function names and format the file on save.
 * Validate your results with GitHub Copilot.
+* Perform the statistical analysis to identify if any drug is working. Please write down a string with a name of working drug in the `solution.txt` file, "Drug A" or "Drug B" or "Drug C" or "None".
 * Stage, Commit and Push your work.
+
+**You SUCEEDED when GitHub actions pipeline will pass (green color).**
+
 
 

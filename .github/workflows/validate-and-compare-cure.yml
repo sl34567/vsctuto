@@ -1,0 +1,47 @@
+# .github/workflows/validate-and-compare-cure.yml
+name: Validate & Compare Cure
+
+on:
+  push:
+
+jobs:
+  validate-and-compare:
+    runs-on: ubuntu-latest
+    env:
+      CURE: ${{ vars.cure }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Ensure .vscode/settings.json & extensions.json exist
+        run: |
+          test -f .vscode/settings.json  || (echo "❌ .vscode/settings.json missing" && exit 1)
+          test -f .vscode/extensions.json || (echo "❌ .vscode/extensions.json missing" && exit 1)
+
+      - name: Ensure .devcontainer/devcontainer.json exists
+        run: |
+          test -f .devcontainer/devcontainer.json || (echo "❌ .devcontainer/devcontainer.json missing" && exit 1)
+
+      - name: Ensure LICENSE exists
+        run: |
+          test -f LICENSE || (echo "❌ LICENSE file missing" && exit 1)
+
+      - name: Ensure 'fontsize' is specified in settings.json
+        run: |
+          jq -e 'has("fontsize")' .vscode/settings.json \
+            || (echo "❌ key 'fontsize' not found in .vscode/settings.json" && exit 1)
+
+      - name: Ensure solution.txt exists
+        run: |
+          test -f solution.txt || (echo "❌ solution.txt missing" && exit 1)
+
+      - name: Read and trim solution, compare to repo variable
+        run: |
+          trimmed=$(<solution.txt xargs)
+          echo "Trimmed solution.txt → '$trimmed'"
+          if [ "$trimmed" != "$CURE" ]; then
+            echo "❌ Mismatch: solution.txt ('$trimmed') ≠ vars.cure ('$CURE')" && exit 1
+          else
+            echo "✅ Match: solution.txt equals vars.cure ('$CURE')"
+          fi
