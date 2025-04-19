@@ -18,11 +18,15 @@ Visual Studio Code (VS Code) is a lightweight, free code editor developed by Mic
 
 Visual Studio Code offers a vast ecosystem of extensions in its Marketplace, including linters, debuggers, themes, and code snippets, all designed to enhance developer productivity. For instructions on finding, installing, and managing extensions, refer to the official documentation at [Extension Marketplace Section](https://code.visualstudio.com/docs/editor/extension-marketplace). Although every Marketplace extension is evaluated for basic functionality and security, it is important to examine user ratings, download counts, and publisher reputation before installation to ensure reliability.
 
+![Visual Studio Code Extensions](/img/vsc-extension.png)
+
 ### GitHub Copilot
 
 [GitHub Copilot](https://github.com/features/copilot) transforms the developer experience. Backed by the leaders in AI, GitHub Copilot provides contextualized assistance throughout the software development lifecycle, from code completions and chat assistance in the IDE (Integrated Development Environment) to code explanations and answers to docs in GitHub and more.
 
 GitHub Copilot is available by [Chat](https://github.com/copilot) or can be [integrated into your IDE like Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot).
+
+![GitHub Copilot](/img/github-copilot.jpg)
 
 ## Tutorial (50 minutes)
 
