@@ -44,6 +44,11 @@ jobs:
           jq -e 'has("editor.fontSize")' .vscode/settings.json \
             || (echo "❌ key 'editor.fontSize' not found in .vscode/settings.json" && exit 1)
 
+      - name: Ensure 'tonybaloney.vscode-pets' is specified in extensions.json
+        run: |
+          jq -e 'has("tonybaloney.vscode-pets")' .vscode/extensions.json \
+            || (echo "❌ key 'tonybaloney.vscode-pets' not found in .vscode/extensions.json" && exit 1)
+
       - name: Ensure solution.txt exists
         run: |
           test -f solution.txt || (echo "❌ solution.txt missing" && exit 1)

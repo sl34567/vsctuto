@@ -35,6 +35,8 @@ Please Use Python or R.
 
 **You SUCCEEDED when GitHub actions pipeline will pass (green color).**
 
+NOTE: Please use valid pure JSON files, so must not contain any comments 
+
 Checklist for Success:
 
 * Fork the vsctuto repository on GitHub.
@@ -45,7 +47,7 @@ Visual Studio Code Settings (20 minutes)
 * Reload the window of the web vscode session and inspect what changed.
 * Create a `LICENSE` file. [choosealicense](https://choosealicense.com/) and `https://github.com/[YOURUSERNAME]/vsctuto/community/license/new?branch=main` can be helpful.
 * Change the editor font size in Settings to 15. In settings, Copy the editor font size setting JSON. Add the editor font size setting JSON to the `.vscode/settings.json` file. 
-* Please find out the id for vscode pets extension. Add the extension id to the `.vscode/extensions.json` file. Reload the window and check out what changed in the Extensions tab. Install the vscode pets extension and run the pet session.
+* Please find out the id for vscode pets extension. Add the extension id to the `.vscode/extensions.json` file. Check out what changed in the Extensions tab. Install the vscode pets extension and run the pet session.
 * Stage, Commit and Push the changes.
 
 
