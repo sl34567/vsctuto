@@ -1,4 +1,3 @@
-# .github/workflows/validate-and-compare-cure.yml
 name: Validate & Compare Cure
 
 on:
@@ -12,58 +11,83 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
 
-      # ─── Validate JSON formatting ─────────────────────────────────────────────
-      - name: Validate JSON format of .vscode/settings.json
-        run: |
-          test -f .vscode/settings.json \
-            || (echo "❌ .vscode/settings.json missing" && exit 1)
-          jq -e . .vscode/settings.json > /dev/null \
-            || (echo "❌ .vscode/settings.json is not valid JSON" && exit 1)
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
 
-      - name: Validate JSON format of .vscode/extensions.json
+      - name: Install dependencies
         run: |
-          test -f .vscode/extensions.json \
-            || (echo "❌ .vscode/extensions.json missing" && exit 1)
-          jq -e . .vscode/extensions.json > /dev/null \
-            || (echo "❌ .vscode/extensions.json is not valid JSON" && exit 1)
+          python -m pip install --upgrade pip
+          pip install hjson
 
-      - name: Validate JSON format of .devcontainer/devcontainer.json
+      # ─── Validate JSON with comments support ─────────────────────────────────────
+      - name: Validate JSON files
         run: |
-          test -f .devcontainer/devcontainer.json \
-            || (echo "❌ .devcontainer/devcontainer.json missing" && exit 1)
-          jq -e . .devcontainer/devcontainer.json > /dev/null \
-            || (echo "❌ .devcontainer/devcontainer.json is not valid JSON" && exit 1)
+          import hjson, os, sys
+
+          def validate_json(filepath):
+              if not os.path.isfile(filepath):
+                  print(f"❌ {filepath} missing")
+                  return False
+              try:
+                  with open(filepath, "r") as f:
+                      hjson.load(f)
+                  print(f"✅ {filepath} is valid")
+                  return True
+              except Exception as e:
+                  print(f"❌ {filepath} is not valid: {e}")
+                  return False
+
+          # Validate all JSON files
+          files = [
+              ".vscode/settings.json",
+              ".vscode/extensions.json",
+              ".devcontainer/devcontainer.json"
+          ]
+
+          if not all(validate_json(file) for file in files):
+              sys.exit(1)
+        shell: python {0}
 
       # ─── Existing checks ──────────────────────────────────────────────────────
       - name: Ensure LICENSE exists
         run: |
           test -f LICENSE || (echo "❌ LICENSE file missing" && exit 1)
 
-      - name: Ensure 'editor.fontSize' is specified in settings.json
+      - name: Check required configurations
         run: |
-          jq -e 'has("editor.fontSize")' .vscode/settings.json \
-            || (echo "❌ key 'editor.fontSize' not found in .vscode/settings.json" && exit 1)
+          import hjson, sys
 
-      - name: Ensure 'tonybaloney.vscode-pets' is specified in extensions.json
-        run: |
-          jq -e 'has("tonybaloney.vscode-pets")' .vscode/extensions.json \
-            || (echo "❌ key 'tonybaloney.vscode-pets' not found in .vscode/extensions.json" && exit 1)
+          # Check settings.json for editor.fontSize
+          with open(".vscode/settings.json", "r") as f:
+              settings = hjson.load(f)
+          if "editor.fontSize" not in settings:
+              print("❌ key \"editor.fontSize\" not found in settings.json")
+              sys.exit(1)
+          print("✅ Required settings found")
 
-      - name: Ensure solution.txt exists
-        run: |
-          test -f solution.txt || (echo "❌ solution.txt missing" && exit 1)
+          # Check extensions.json for tonybaloney.vscode-pets
+          with open(".vscode/extensions.json", "r") as f:
+              extensions = hjson.load(f)
+          if "tonybaloney.vscode-pets" not in extensions:
+              print("❌ key \"tonybaloney.vscode-pets\" not found in extensions.json")
+              sys.exit(1)
+          print("✅ Required extensions found")
+        shell: python {0}
 
-      - name: Read, trim solution and compare to repo variable
+      - name: Ensure solution.txt exists and matches
         env:
           CURE: ${{ secrets.cure }}
         run: |
+          test -f solution.txt || (echo "❌ solution.txt missing" && exit 1)
+
           trimmed=$(<solution.txt xargs)
           echo "Trimmed solution.txt → '$trimmed'"
 
           if [ "$trimmed" != "$CURE" ]; then
-            echo "❌ Mismatch: solution.txt ('$trimmed') does not match the expected cure" >&2
+            echo "❌ Mismatch: solution.txt does not match the expected cure" >&2
             exit 1
           fi
 
           echo "✅ Match: solution.txt equals the expected cure"
-          
