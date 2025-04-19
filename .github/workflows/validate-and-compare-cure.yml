@@ -21,7 +21,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install hjson
 
-      # ─── Validate JSON with comments support ─────────────────────────────────────
       - name: Validate JSON files
         run: |
           import hjson, os, sys
@@ -50,11 +49,6 @@ jobs:
               sys.exit(1)
         shell: python {0}
 
-      # ─── Existing checks ──────────────────────────────────────────────────────
-      - name: Ensure LICENSE exists
-        run: |
-          test -f LICENSE || (echo "❌ LICENSE file missing" && exit 1)
-
       - name: Check required configurations
         run: |
           import hjson, sys
@@ -70,11 +64,15 @@ jobs:
           # Check extensions.json for tonybaloney.vscode-pets
           with open(".vscode/extensions.json", "r") as f:
               extensions = hjson.load(f)
-          if "tonybaloney.vscode-pets" not in extensions:
+          if "tonybaloney.vscode-pets" not in extensions["recommendations"]:
               print("❌ key \"tonybaloney.vscode-pets\" not found in extensions.json")
               sys.exit(1)
           print("✅ Required extensions found")
         shell: python {0}
+
+      - name: Ensure LICENSE exists
+        run: |
+          test -f LICENSE || (echo "❌ LICENSE file missing" && exit 1)
 
       - name: Ensure solution.txt exists and matches
         env:

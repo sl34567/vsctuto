@@ -14,6 +14,10 @@ Visual Studio Code (VS Code) is a lightweight, free code editor developed by Mic
 
 [shiny](https://github.com/rstudio/shiny) and [matplotlib](https://github.com/matplotlib/matplotlib) are examples of top projects which use Visual Studio Code.
 
+### Visual Studio Code Extensions
+
+Visual Studio Code offers a vast ecosystem of extensions in its Marketplace, including linters, debuggers, themes, and code snippets, all designed to enhance developer productivity. For instructions on finding, installing, and managing extensions, refer to the official documentation at [Extension Marketplace Section](https://code.visualstudio.com/docs/editor/extension-marketplace). Although every Marketplace extension is evaluated for basic functionality and security, it is important to examine user ratings, download counts, and publisher reputation before installation to ensure reliability.
+
 ### GitHub Copilot
 
 [GitHub Copilot](https://github.com/features/copilot) transforms the developer experience. Backed by the leaders in AI, GitHub Copilot provides contextualized assistance throughout the software development lifecycle, from code completions and chat assistance in the IDE (Integrated Development Environment) to code explanations and answers to docs in GitHub and more.
@@ -35,15 +39,17 @@ Please Use Python or R.
 
 **You SUCCEEDED when GitHub actions pipeline will pass (green color).**
 
+Note: If this is a guided tutorial, please—if possible—use two screens: one to display the teacher’s screen and the other for your own work.
+
 Checklist for Success:
 
 - Fork the vsctuto repository on GitHub.
 
 Visual Studio Code Settings (20 minutes)
 
-- Please use GitHub "Fn + ." to access web vscode. Stage, Commit and Push the `.vscode/settings.json` and `.vscode/extensions.json` files. Please refer to [python_codespace](https://www.github.com/polkas/python_codespace) or [r_codespace](https://www.github.com/polkas/r_codespace) repositories with `.vscode` directories. The .vscode folder contains environment-specific JSON files for editor settings, debugging configurations, and task automation.
+- Please use GitHub "Fn + ." to access web vscode. Stage, Commit and Push the `.vscode/settings.json` and `.vscode/extensions.json` files. [JSONC](https://en.wikipedia.org/wiki/JSON#JSONC) is acceptable. Please refer to [python_codespace](https://www.github.com/polkas/python_codespace) or [r_codespace](https://www.github.com/polkas/r_codespace) repositories with `.vscode` directories. The .vscode folder contains environment-specific JSON files for editor settings, debugging configurations, and task automation.
 - Reload the window of the web vscode session and inspect what changed.
-- Create a `LICENSE` file. [choosealicense](https://choosealicense.com/) and `https://github.com/[YOURUSERNAME]/vsctuto/community/license/new?branch=main` can be helpful.
+- Create a `LICENSE` file. [choosealicense](https://choosealicense.com/) can be helpful.
 - Change the editor font size in Settings to 15. In settings, Copy the editor font size setting JSON. Add the editor font size setting JSON to the `.vscode/settings.json` file.
 - Please find out the id for vscode pets extension. Add the extension id to the `.vscode/extensions.json` file. Check out what changed in the Extensions tab. Install the vscode pets extension and run the pet session.
 - Stage, Commit and Push the changes.
