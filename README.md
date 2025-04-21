@@ -6,7 +6,9 @@ Visual Studio Code Tutorial for Data Scientists and Statistical Programmers.
 
 Visual Studio Code (VS Code) is a lightweight, free code editor developed by Microsoft. It supports many programming languages and offers a range of extensions to enhance productivity. It provides built-in features like debugging and smart code completion. It also integrates easily with version control systems like Git.
 
-<a href="https://code.visualstudio.com/docs"><img src="img/vscode.png" alt="Visual Studio Code Logo" height="300px" width="auto">Visual Studio Code Blog Post</a>
+[**Visual Studio Code Blog Post**](https://polkas.github.io/posts/vscode/)
+
+<a href="https://code.visualstudio.com/docs"><img src="img/vscode.png" alt="Visual Studio Code Logo" height="300px" width="auto"></a>
 
 ## Tutorial (50 minutes)
 
