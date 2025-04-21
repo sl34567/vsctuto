@@ -6,28 +6,7 @@ Visual Studio Code Tutorial for Data Scientists and Statistical Programmers.
 
 Visual Studio Code (VS Code) is a lightweight, free code editor developed by Microsoft. It supports many programming languages and offers a range of extensions to enhance productivity. It provides built-in features like debugging and smart code completion. It also integrates easily with version control systems like Git.
 
-<a href="https://code.visualstudio.com/docs"><img src="img/vscode.png" alt="Visual Studio Code Logo" height="300px" width="auto"></a>
-
-[Visual Studio Code Documentation](https://code.visualstudio.com/docs)
-
-### Who has been using Visual Studio Code
-
-[shiny](https://github.com/rstudio/shiny) and [matplotlib](https://github.com/matplotlib/matplotlib) are examples of top projects which use Visual Studio Code.
-
-### Visual Studio Code Extensions
-
-Visual Studio Code offers a vast ecosystem of extensions in its Marketplace, including linters, debuggers, themes, and code snippets, all designed to enhance developer productivity. For instructions on finding, installing, and managing extensions, refer to the official documentation at [Extension Marketplace Section](https://code.visualstudio.com/docs/editor/extension-marketplace). Although every Marketplace extension is evaluated for basic functionality and security, it is important to examine user ratings, download counts, and publisher reputation before installation to ensure reliability.
-
-<a href="https://code.visualstudio.com/docs/editor/extension-marketplace"><img src="img/vsc-extension.png" alt="Visual Studio Code Extensions" height="400px" width="auto"></a>
-
-### GitHub Copilot
-
-[GitHub Copilot](https://github.com/features/copilot) transforms the developer experience. Backed by the leaders in AI, GitHub Copilot provides contextualized assistance throughout the software development lifecycle, from code completions and chat assistance in the IDE (Integrated Development Environment) to code explanations and answers to docs in GitHub and more.
-
-GitHub Copilot is available by [Chat](https://github.com/copilot) or can be [integrated into your IDE like Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot).
-
-
-<a href="https://github.com/copilot"><img src="img/github-copilot.jpg" alt="GitHub Copilot" height="400px" width="auto"></a>
+<a href="https://code.visualstudio.com/docs"><img src="img/vscode.png" alt="Visual Studio Code Logo" height="300px" width="auto">Visual Studio Code Blog Post</a>
 
 ## Tutorial (50 minutes)
 
